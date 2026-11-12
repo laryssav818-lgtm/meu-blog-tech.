@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meu Blog Tech | Laryssa Fontes</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;line-height:1.7;color:#F1F5F9;background:#0F172A}
+header{padding:58px 20px;text-align:center;color:#fff;background:linear-gradient(135deg,#172554,#0F766E);border-bottom:4px solid #5EEAD4}
+header h1{margin:12px 0;font-size:clamp(2rem,6vw,3.2rem);letter-spacing:1px}header p{max-width:620px;margin:auto;color:#E0F2FE}
+.tag{display:inline-block;padding:5px 13px;border:1px solid #99F6E4;border-radius:30px;color:#CCFBF1;font-size:12px;letter-spacing:1px}
+main{width:calc(100% - 32px);max-width:900px;margin:36px auto 55px;padding:30px;background:#17263B;color:#F1F5F9;text-align:left;border:1px solid #334B64;border-radius:22px;box-shadow:0 16px 40px rgba(0,0,0,.22)}
+h2{margin-top:0;color:#5EEAD4}.author{color:#BAE6FD;font-size:14px}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-top:20px}
+.topic{padding:20px;background:#223750;border:1px solid #3B5873;border-radius:16px;transition:transform .2s ease,border-color .2s ease}
+.topic:hover{transform:translateY(-4px);border-color:#5EEAD4}.topic h3{margin:5px 0;color:#99F6E4}.topic p{margin:0;color:#DBEAFE;font-size:14px}
+.contrast-section{margin-top:28px;padding:24px;background:#1E334A;border:1px solid #42617B;border-radius:18px}.contrast-section p{color:#E2E8F0}
+.color-example{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+.sample{min-height:105px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px;border-radius:12px;font-weight:bold}
+.sample.dark{background:#0F766E;color:#fff}.sample.light{background:#F0FDFA;color:#134E4A;border:1px solid #99F6E4}
+.contrast-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.contrast-links a{display:inline-block;padding:10px 14px;border-radius:10px;color:#102A35;background:#5EEAD4;text-decoration:none;font-size:14px;font-weight:bold}
+.contrast-links a:hover,.contrast-links a:focus{background:#CCFBF1;text-decoration:underline;outline:2px solid #fff;outline-offset:3px}
+footer{padding:22px;text-align:center;color:#CBD5E1;font-size:14px}
+@media(max-width:600px){main{padding:20px}.color-example{grid-template-columns:1fr}header{padding:42px 18px}}
+@media(prefers-reduced-motion:reduce){.topic{transition:none}.topic:hover{transform:none}}
+</style>
+</head>
+<body>
+<header><span class="tag">TECNOLOGIA • APRENDIZADO • CRIATIVIDADE</span><h1>Meu Blog Tech</h1><p>Vou compartilhar conhecimentos sobre tecnologia e programação.</p></header>
+<main>
+<article><h2>Meu primeiro post</h2><p class="author">Por: Laryssa Fontes</p><p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia. Este espaço foi criado para registrar o que estou aprendendo e dividir conhecimentos de um jeito simples e interessante.</p></article>
+<section class="about"><h2>O que você vai encontrar por aqui?</h2><div class="topic-grid">
+<div class="topic"><div aria-hidden="true">💻</div><h3>Programação</h3><p>Aprendizados sobre HTML, criação de sites e como o código funciona.</p></div>
+<div class="topic"><div aria-hidden="true">🌐</div><h3>Tecnologia</h3><p>Curiosidades, ferramentas digitais e novidades do mundo tecnológico.</p></div>
+<div class="topic"><div aria-hidden="true">📚</div><h3>Dicas de estudo</h3><p>Ideias para praticar, aprender e desenvolver novas habilidades.</p></div>
+</div></section>
+<section class="contrast-section"><h2>Por que o contraste das cores é importante?</h2><p>Escolher cores não é apenas uma questão de aparência. O texto precisa se destacar do fundo para que todas as pessoas consigam ler com mais facilidade. Isso faz parte da acessibilidade digital.</p>
+<div class="color-example" aria-label="Exemplos de contraste entre texto e fundo"><div class="sample dark"><span>Texto branco</span><small>Fundo azul-marinho</small></div><div class="sample light"><span>Texto azul-marinho</span><small>Fundo branco</small></div></div>
+<p>Uma ferramenta de contraste compara a cor do texto com a cor do fundo e informa se a combinação atende às recomendações de acessibilidade. No meu blog, escolhi azul-escuro (#0F172A), azul-petróleo (#0F766E) e verde-água (#5EEAD4). O contraste entre os fundos escuros e os textos claros ajuda a manter a leitura confortável.</p>
+<h3>Ferramentas para testar cores</h3><p>Você pode inserir os códigos das cores e verificar se o contraste é adequado:</p>
+<nav class="contrast-links" aria-label="Verificadores de contraste"><a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener noreferrer">WebAIM Contrast Checker</a><a href="https://color.adobe.com/pt/create/color-contrast-analyzer" target="_blank" rel="noopener noreferrer">Adobe Color</a><a href="https://coolors.co/contrast-checker" target="_blank" rel="noopener noreferrer">Coolors</a></nav></section>
+</main><footer>Feito por Laryssa Fontes • Projeto escolar de Introdução à Programação</footer>
+</body></html>
