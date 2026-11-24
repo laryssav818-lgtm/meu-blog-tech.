@@ -14,6 +14,12 @@ h2{margin-top:0;color:#5EEAD4}.author{color:#BAE6FD;font-size:14px}
 .topic-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-top:20px}
 .topic{padding:20px;background:#223750;border:1px solid #3B5873;border-radius:16px;transition:transform .2s ease,border-color .2s ease}
 .topic:hover{transform:translateY(-4px);border-color:#5EEAD4}.topic h3{margin:5px 0;color:#99F6E4}.topic p{margin:0;color:#DBEAFE;font-size:14px}
+.like-area{margin-top:24px;padding-top:18px;border-top:1px solid #3B5873}
+.like-button{display:inline-flex;align-items:center;gap:9px;padding:10px 18px;border:1px solid #5EEAD4;border-radius:999px;background:#0F766E;color:#fff;font-size:17px;font-weight:bold;cursor:pointer;transition:background .2s ease,transform .2s ease}
+.like-button:hover{background:#115E59;transform:translateY(-2px)}
+.like-button:focus-visible{outline:3px solid #CCFBF1;outline-offset:3px}
+.like-button:active{transform:scale(.97)}
+.like-button span{min-width:1ch}
 .contrast-section{margin-top:28px;padding:24px;background:#1E334A;border:1px solid #42617B;border-radius:18px}.contrast-section p{color:#E2E8F0}
 .color-example{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
 .sample{min-height:105px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px;border-radius:12px;font-weight:bold}
@@ -22,13 +28,21 @@ h2{margin-top:0;color:#5EEAD4}.author{color:#BAE6FD;font-size:14px}
 .contrast-links a:hover,.contrast-links a:focus{background:#CCFBF1;text-decoration:underline;outline:2px solid #fff;outline-offset:3px}
 footer{padding:22px;text-align:center;color:#CBD5E1;font-size:14px}
 @media(max-width:600px){main{padding:20px}.color-example{grid-template-columns:1fr}header{padding:42px 18px}}
-@media(prefers-reduced-motion:reduce){.topic{transition:none}.topic:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){.topic,.like-button{transition:none}.topic:hover,.like-button:hover{transform:none}}
 </style>
 </head>
 <body>
 <header><span class="tag">TECNOLOGIA • APRENDIZADO • CRIATIVIDADE</span><h1>Meu Blog Tech</h1><p>Vou compartilhar conhecimentos sobre tecnologia e programação.</p></header>
 <main>
-<article><h2>Meu primeiro post</h2><p class="author">Por: Laryssa Fontes</p><p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia. Este espaço foi criado para registrar o que estou aprendendo e dividir conhecimentos de um jeito simples e interessante.</p></article>
+<article>
+<h2>Meu primeiro post</h2>
+<p class="author">Por: Laryssa Fontes</p>
+<p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia. Este espaço foi criado para registrar o que estou aprendendo e dividir conhecimentos de um jeito simples e interessante.</p>
+<div class="like-area">
+<p>Gostou deste post? Deixe sua curtida!</p>
+<button class="like-button" id="like-button" type="button" aria-label="Curtir este post">❤️ <span id="like-count" aria-live="polite">0</span></button>
+</div>
+</article>
 <section class="about"><h2>O que você vai encontrar por aqui?</h2><div class="topic-grid">
 <div class="topic"><div aria-hidden="true">💻</div><h3>Programação</h3><p>Aprendizados sobre HTML, criação de sites e como o código funciona.</p></div>
 <div class="topic"><div aria-hidden="true">🌐</div><h3>Tecnologia</h3><p>Curiosidades, ferramentas digitais e novidades do mundo tecnológico.</p></div>
@@ -39,5 +53,17 @@ footer{padding:22px;text-align:center;color:#CBD5E1;font-size:14px}
 <p>Uma ferramenta de contraste compara a cor do texto com a cor do fundo e informa se a combinação atende às recomendações de acessibilidade. No meu blog, escolhi azul-escuro (#0F172A), azul-petróleo (#0F766E) e verde-água (#5EEAD4). O contraste entre os fundos escuros e os textos claros ajuda a manter a leitura confortável.</p>
 <h3>Ferramentas para testar cores</h3><p>Você pode inserir os códigos das cores e verificar se o contraste é adequado:</p>
 <nav class="contrast-links" aria-label="Verificadores de contraste"><a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener noreferrer">WebAIM Contrast Checker</a><a href="https://color.adobe.com/pt/create/color-contrast-analyzer" target="_blank" rel="noopener noreferrer">Adobe Color</a><a href="https://coolors.co/contrast-checker" target="_blank" rel="noopener noreferrer">Coolors</a></nav></section>
-</main><footer>Feito por Laryssa Fontes • Projeto escolar de Introdução à Programação</footer>
-</body></html>
+</main>
+<footer>Feito por Laryssa Fontes • Projeto escolar de Introdução à Programação</footer>
+<script>
+const botao = document.querySelector("#like-button");
+
+botao.addEventListener("click", botaoClicado);
+
+function botaoClicado() {
+  const texto = botao.querySelector("span");
+  texto.textContent++;
+}
+</script>
+</body>
+</html>
