@@ -40,18 +40,19 @@ footer{padding:22px;text-align:center;color:#CBD5E1;font-size:14px}
 <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia. Este espaço foi criado para registrar o que estou aprendendo e dividir conhecimentos de um jeito simples e interessante.</p>
 <div class="like-area">
 <p>Gostou deste post? Deixe sua curtida!</p>
-<!-- O elemento button cria o botão que a pessoa pode clicar para curtir o post.
-     A classe like-button permite aplicar o visual definido no CSS.
-     O id like-button identifica este botão para o JavaScript.
-     type="button" indica que ele é um botão comum, sem enviar formulários.
-     O emoji ❤️ representa visualmente a reação de curtir. -->
-<button class="like-button" id="like-button" type="button" aria-label="Curtir este post">
+<!-- Cada button representa uma reação diferente.
+     A classe like-button aplica o mesmo estilo aos dois botões.
+     type="button" indica que eles não enviam formulários.
+     O aria-label descreve a reação para leitores de tela. -->
+<button class="like-button" type="button" aria-label="Curtir este post">
   ❤️
-  <!-- O span separa o número de curtidas do restante do botão.
-       Assim, o JavaScript consegue localizar e atualizar somente esse número,
-       sem alterar o emoji ou o texto ao redor. O contador começa em zero.
-       aria-live="polite" avisa leitores de tela quando o número for atualizado. -->
-  <span id="like-count" aria-live="polite">0</span>
+  <!-- O span guarda o contador desta reação. -->
+  <span aria-live="polite">0</span>
+</button>
+<button class="like-button" type="button" aria-label="Apoiar este post">
+  👍
+  <!-- Este span guarda um contador independente para o joinha. -->
+  <span aria-live="polite">0</span>
 </button>
 </div>
 </article>
@@ -68,23 +69,23 @@ footer{padding:22px;text-align:center;color:#CBD5E1;font-size:14px}
 </main>
 <footer>Feito por Laryssa Fontes • Projeto escolar de Introdução à Programação</footer>
 <script>
-// Seleciona o botão pelo id e guarda sua referência na variável botao.
-const botao = document.querySelector("#like-button");
+// Seleciona todos os botões que possuem a classe like-button.
+const botoes = document.querySelectorAll(".like-button");
 
-// Adiciona um ouvinte de evento: quando houver um clique no botão,
-// o navegador executará a função botaoClicado.
-botao.addEventListener("click", botaoClicado);
+// O forEach percorre a lista e executa o código uma vez para cada botão.
+botoes.forEach(function(botao) {
+  // Adiciona um evento de clique ao botão atual.
+  botao.addEventListener("click", botaoClicado);
 
-// Esta função reúne as instruções que serão executadas a cada clique.
-function botaoClicado() {
-  // Procura o elemento span que está dentro do botão.
-  // O span contém somente o número, por isso podemos atualizá-lo separadamente.
-  const texto = botao.querySelector("span");
+  // Esta função é executada quando o botão atual recebe um clique.
+  function botaoClicado() {
+    // Localiza o span dentro deste botão, sem afetar os outros contadores.
+    let texto = botao.querySelector("span");
 
-  // O operador ++ aumenta em 1 o número que está dentro do span.
-  // Assim, cada clique acrescenta uma curtida ao contador.
-  texto.textContent++;
-}
+    // Aumenta em 1 somente o contador do botão que foi clicado.
+    texto.textContent++;
+  }
+});
 </script>
 </body>
 </html>
