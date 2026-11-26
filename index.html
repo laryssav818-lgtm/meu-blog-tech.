@@ -20,6 +20,14 @@ h2{margin-top:0;color:#5EEAD4}.author{color:#BAE6FD;font-size:14px}
 .like-button:focus-visible{outline:3px solid #CCFBF1;outline-offset:3px}
 .like-button:active{transform:scale(.97)}
 .like-button span{min-width:1ch}
+.second-post{margin-top:30px;padding:26px;background:#102A43;border:1px solid #5EEAD4;border-radius:18px}
+.second-post .post-label{display:inline-block;margin-bottom:12px;padding:4px 11px;background:#5EEAD4;color:#102A35;border-radius:20px;font-size:12px;font-weight:bold;letter-spacing:1px}
+.second-post h2{margin:0 0 6px;font-size:25px}
+.second-post .post-intro{font-size:17px;color:#E0F2FE}
+.second-post .post-highlight{margin:20px 0;padding:16px 20px;border-left:4px solid #5EEAD4;background:#1E3A50;border-radius:0 12px 12px 0;color:#F0FDFA}
+.second-post h3{color:#99F6E4;margin-bottom:6px}
+.second-post ol{padding-left:24px;color:#DBEAFE}
+.second-post .post-signature{margin-top:22px;text-align:right;color:#BAE6FD;font-size:14px}
 .contrast-section{margin-top:28px;padding:24px;background:#1E334A;border:1px solid #42617B;border-radius:18px}.contrast-section p{color:#E2E8F0}
 .color-example{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
 .sample{min-height:105px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px;border-radius:12px;font-weight:bold}
@@ -27,7 +35,7 @@ h2{margin-top:0;color:#5EEAD4}.author{color:#BAE6FD;font-size:14px}
 .contrast-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.contrast-links a{display:inline-block;padding:10px 14px;border-radius:10px;color:#102A35;background:#5EEAD4;text-decoration:none;font-size:14px;font-weight:bold}
 .contrast-links a:hover,.contrast-links a:focus{background:#CCFBF1;text-decoration:underline;outline:2px solid #fff;outline-offset:3px}
 footer{padding:22px;text-align:center;color:#CBD5E1;font-size:14px}
-@media(max-width:600px){main{padding:20px}.color-example{grid-template-columns:1fr}header{padding:42px 18px}}
+@media(max-width:600px){main{padding:20px}.color-example{grid-template-columns:1fr}header{padding:42px 18px}.second-post{padding:20px}}
 @media(prefers-reduced-motion:reduce){.topic,.like-button{transition:none}.topic:hover,.like-button:hover{transform:none}}
 </style>
 </head>
@@ -40,23 +48,35 @@ footer{padding:22px;text-align:center;color:#CBD5E1;font-size:14px}
 <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia. Este espaço foi criado para registrar o que estou aprendendo e dividir conhecimentos de um jeito simples e interessante.</p>
 <div class="like-area">
 <p>Gostou deste post? Deixe sua reação!</p>
-<button class="like-button" type="button" aria-label="Curtir este post">
-  ❤️ <span aria-live="polite">0</span>
-</button>
-<button class="like-button" type="button" aria-label="Apoiar este post">
-  👍 <span aria-live="polite">0</span>
-</button>
-<button class="like-button" type="button" aria-label="Reagir com risada">
-  😂 <span aria-live="polite">0</span>
-</button>
-<button class="like-button" type="button" aria-label="Reagir com surpresa">
-  😮 <span aria-live="polite">0</span>
-</button>
-<button class="like-button" type="button" aria-label="Reagir com comemoração">
-  🎉 <span aria-live="polite">0</span>
-</button>
+<button class="like-button" type="button" aria-label="Curtir este post">❤️ <span aria-live="polite">0</span></button>
+<button class="like-button" type="button" aria-label="Apoiar este post">👍 <span aria-live="polite">0</span></button>
+<button class="like-button" type="button" aria-label="Reagir com risada">😂 <span aria-live="polite">0</span></button>
+<button class="like-button" type="button" aria-label="Reagir com surpresa">😮 <span aria-live="polite">0</span></button>
+<button class="like-button" type="button" aria-label="Reagir com comemoração">🎉 <span aria-live="polite">0</span></button>
 </div>
 </article>
+
+<article class="second-post">
+  <span class="post-label">POST ESPECIAL</span>
+  <header class="post-heading">
+    <h2>Como a programação transforma ideias em projetos</h2>
+    <p class="author">Por: Laryssa Fontes • Aprendizado e criatividade</p>
+  </header>
+  <p class="post-intro">Você já teve uma ideia e imaginou como ela poderia virar um site ou aplicativo? A programação é uma das ferramentas que ajudam a transformar essa imaginação em algo que as pessoas podem usar.</p>
+  <aside class="post-highlight">
+    <strong>Uma ideia importante:</strong> aprender a programar é praticar, testar possibilidades, encontrar soluções e melhorar um pouco a cada tentativa.
+  </aside>
+  <section>
+    <h3>Por onde começar?</h3>
+    <ol>
+      <li><strong>Planejar:</strong> pensar no objetivo e em quem vai utilizar o projeto.</li>
+      <li><strong>Construir:</strong> usar HTML para organizar o conteúdo e CSS para cuidar da aparência.</li>
+      <li><strong>Experimentar:</strong> adicionar interações com JavaScript e testar o resultado.</li>
+    </ol>
+  </section>
+  <p class="post-signature">✨ Continue aprendendo e colocando suas ideias em prática!</p>
+</article>
+
 <section class="about"><h2>O que você vai encontrar por aqui?</h2><div class="topic-grid">
 <div class="topic"><div aria-hidden="true">💻</div><h3>Programação</h3><p>Aprendizados sobre HTML, criação de sites e como o código funciona.</p></div>
 <div class="topic"><div aria-hidden="true">🌐</div><h3>Tecnologia</h3><p>Curiosidades, ferramentas digitais e novidades do mundo tecnológico.</p></div>
